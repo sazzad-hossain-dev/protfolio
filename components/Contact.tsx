@@ -50,7 +50,7 @@ const Contact = () => {
                 className="container w-full  space-y-6 "
             >
                 <h1 className="title">
-                    Let’s Create Something{" "}
+                    Let&apos;s Create Something{" "}
                     <span className="text-[#8B48E8]">Amazing</span>
                 </h1>
                 <div className="bg-container opacity-95 p-6 rounded-xl space-y-4">
