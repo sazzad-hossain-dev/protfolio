@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'outfit';
+  src: url('https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJtEtq.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont3';
+  src: url('https://framerusercontent.com/third-party-assets/fontshare/wf/EUV6IZMPXOYBUY6KFIXKZWM47ESY5XYA/BLW2AGODUKQKRMYEVOEMMPY2ITRKBJIP/OKGWSU2PUNNFKQVFV2XFOSAHRXYREMR2.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background:url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png") repeat;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.911);
+  pointer-events: none;
+  z-index: -1; 
+}
+
+.MyGradient {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1) 20%,
+    rgba(0,0,0,1) 80%,
+    rgba(0,0,0,0)
+  );
+}
+/* Hide scrollbar for Webkit (Chrome, Safari, Edge) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+/* Title text CSS */
+.title {
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-outfit font-semibold text-white leading-tight;
+}
+/* Description text CSS */
+.description {
+  @apply text-base  md:text-xl  font-outfit font-normal text-[#d9d9d9] leading-[22px];
+}
+/* div CSS */
+.base-container {
+  @apply max-w-[700px] rounded-xl transition-all duration-300  opacity-95 p-4 mx-4  ;
+}
+
+.bg-container {
+@apply bg-[#2C2D2E] backdrop-blur-lg
+}
+
+/* Card CSS */
+
+.card {
+  @apply rounded-xl shadow-md bg-[#2C2D2E] backdrop-blur-lg opacity-95 p-6;
+}
+
+/* NAVBAR CSS */
+.nav-item {
+  @apply relative py-3 px-3 text-white rounded-lg transition-all duration-300 flex items-center justify-center text-xl 
+         hover:bg-[#8B48E8]/50 ;
+}
+
+.nav-active {
+  @apply bg-[#8B48E8] text-white shadow-lg;
+}
