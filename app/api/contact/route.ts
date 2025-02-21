@@ -7,8 +7,8 @@ export async function POST(req) {
         const { name, email, message } = await req.json();
 
         const data = await resend.emails.send({
-            from: "noreply@resend.dev", // Use Resend's default sender
-            to: "bsgametube785@gmail.com", // Change this to your email
+            from: "noreply@resend.dev",
+            to: "bsgametube785@gmail.com",
             subject: "New Contact Form Submission",
             html: `<p><strong>Name:</strong> ${name}</p>
                    <p><strong>Email:</strong> ${email}</p>

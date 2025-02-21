@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import HeroDescription from "./ui/HeroDiscription";
-import HeroText from "./ui/HeroText";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
