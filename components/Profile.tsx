@@ -1,16 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { CiFacebook, CiTwitter } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io5";
-import { useEffect, useState } from "react";
 import CustomBtn from "./ui/CustomBtn";
 
 const TITLES = ["Frontend Developer", "React Developer", "Next.js Developer"];
 
 export default function Profile() {
     const [index, setIndex] = useState(0);
-    const buttonText = "Let's Talk";
 
     useEffect(() => {
         const interval = setInterval(() => {

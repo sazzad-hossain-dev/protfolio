@@ -1,5 +1,5 @@
-import React from "react";
 import StatsCard from "@/components/ui/StatsCard";
+import React from "react";
 
 const statsData = [
     { number: "+2", label: "YEARS OF EXPERIENCE" },

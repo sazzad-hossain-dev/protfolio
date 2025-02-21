@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import HeroDescription from "./HeroDiscription";
+import Image from "next/image";
+import React from "react";
 
 interface Tech {
     src: string;
@@ -12,13 +11,11 @@ interface Tech {
 interface TechSliderProps {
     technologies: Tech[];
     speed?: number;
-    reverse?: boolean;
 }
 
 const TechSlider: React.FC<TechSliderProps> = ({
     technologies,
     speed = 10,
-    reverse = true,
 }) => {
     const repeatedLogos = [...technologies, ...technologies, ...technologies];
 

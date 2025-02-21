@@ -1,7 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import HeroDescription from "./ui/HeroDiscription";
-import HeroText from "./ui/HeroText";
 import { useState } from "react";
 
 const Collabarate = () => {

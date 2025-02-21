@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import HeroDescription from "./ui/HeroDiscription";
 import TechnologyCard from "./ui/TechnologyCard";
 
 export default function Technology() {

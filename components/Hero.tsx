@@ -1,7 +1,5 @@
 "use client";
 import StatsSection from "./StatsSection";
-import HeroDescription from "./ui/HeroDiscription";
-import HeroText from "./ui/HeroText";
 import TechSlider from "./ui/TechSlider";
 
 const technologies = [
