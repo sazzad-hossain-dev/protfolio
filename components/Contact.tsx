@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -10,11 +10,13 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     const [successMessage, setSuccessMessage] = useState("");
 
-    const handleChange = (e) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         setSuccessMessage("");
