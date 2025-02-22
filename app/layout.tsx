@@ -14,8 +14,8 @@ export default function RootLayout({
                 <div className="py-16">
                     <Header />
                 </div>
-                <div className="flex flex-col lg:flex-row overflow-hidden gap-20">
-                    <div className="w-full lg:w-auto">
+                <div className="flex flex-col lg:flex-row overflow-hidden min-h-screen  gap-20">
+                    <div className="w-full lg:w-[400px] h-full  ">
                         <Profile />
                     </div>
                     <main className="w-full">{children}</main>

@@ -43,14 +43,14 @@ const Collabarate = () => {
         >
             <div className="max-w-[540px]">
                 <h2 className="title">
-                    Let's{" "}
+                    Let&apos;s{" "}
                     <span className="text-[#8B48E8] group-hover:text-white">
                         Collaborate
                     </span>
                 </h2>
                 <p className="description">
                     Unlock the potential of your product with expert design and
-                    development services. Let's collaborate to create
+                    development services. Let&apos;s collaborate to create
                     user-centered solutions that not only meet your goals but
                     also delight your users.
                 </p>
