@@ -13,8 +13,8 @@ const technologies = [
 
 const Hero = () => {
     return (
-        <div className="base-container mb-16">
-            <h2 className="title">
+        <div className="base-container mb-16 ">
+            <h2 className="title  ">
                 Transforming Your Ideas into{" "}
                 <span className="text-[#8B48E8]">Reality</span>
             </h2>

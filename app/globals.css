@@ -57,11 +57,11 @@ body::after {
 }
 /* Title text CSS */
 .title {
-  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-outfit font-semibold text-white leading-tight;
+  @apply text-5xl text-center lg:text-left md:text-6xl lg:text-7xl  font-outfit font-semibold text-white leading-tight;
 }
 /* Description text CSS */
 .description {
-  @apply text-base  md:text-xl  font-outfit font-normal text-[#d9d9d9] leading-[22px];
+  @apply text-base  md:text-xl text-center lg:text-left  font-outfit font-normal text-[#d9d9d9] leading-[22px];
 }
 /* div CSS */
 .base-container {

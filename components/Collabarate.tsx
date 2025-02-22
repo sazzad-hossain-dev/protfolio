@@ -18,7 +18,7 @@ const Collabarate = () => {
             y: -55,
             x: 48,
             opacity: 1,
-            transition: { duration: 0.4, ease: "easeInOut" }, // Make sure it's smooth
+            transition: { duration: 0.4, ease: "easeInOut" },
         },
     };
 
@@ -28,13 +28,13 @@ const Collabarate = () => {
             opacity: 1,
             y: -55,
             x: 48,
-            transition: { duration: 0.4, ease: "easeInOut", delay: 0.2 }, // Slight delay for smooth sequence
+            transition: { duration: 0.4, ease: "easeInOut", delay: 0.2 },
         },
     };
 
     return (
         <motion.div
-            className=" base-container bg-container mb-16  group  flex justify-between   hover:bg-[#8B48E8]"
+            className="base-container bg-container mb-16 group flex justify-center gap-2 hover:bg-[#8B48E8]"
             variants={parentVariants}
             initial="initial"
             whileHover="hovered"
@@ -43,22 +43,21 @@ const Collabarate = () => {
         >
             <div className="max-w-[540px]">
                 <h2 className="title">
-                    {" "}
-                    Let&apos;s{" "}
+                    Let's{" "}
                     <span className="text-[#8B48E8] group-hover:text-white">
                         Collaborate
                     </span>
                 </h2>
                 <p className="description">
-                    {" "}
                     Unlock the potential of your product with expert design and
-                    development services. Let&apos;s collaborate to create
+                    development services. Let's collaborate to create
                     user-centered solutions that not only meet your goals but
                     also delight your users.
                 </p>
             </div>
 
-            <div className="h-16 w-16 bg-[#8353b3] overflow-hidden rounded-full flex justify-center items-center relative group-hover:bg-white">
+            {/* Fixed aspect ratio with square for perfect rounded effect */}
+            <div className="w-[18rem] h-16 lg:w-16 lg:h-16  bg-[#8353b3] overflow-hidden rounded-full flex justify-center items-center relative group-hover:bg-white">
                 <motion.img
                     src="/arrow.svg"
                     alt="arrow"
@@ -75,7 +74,7 @@ const Collabarate = () => {
                     alt="second arrow"
                     height={40}
                     width={30}
-                    className="invert  absolute top-[70px] left-[-30px] "
+                    className="invert absolute top-[70px] left-[-30px]"
                     variants={secondArrowVariants}
                     initial="initial"
                     animate={isHovered ? "hovered" : "initial"}

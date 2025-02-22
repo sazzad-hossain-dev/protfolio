@@ -9,7 +9,7 @@ const statsData = [
 
 const StatsSection: React.FC = () => {
     return (
-        <div className="text-white flex flex-col md:flex-row gap-6">
+        <div className="text-white flex gap-6">
             {statsData.map((stat, index) => (
                 <StatsCard
                     key={index}

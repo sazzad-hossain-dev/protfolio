@@ -10,7 +10,7 @@ const ProjectCard = ({
     discription: string;
 }) => {
     return (
-        <div className="max-w-md relative group transition-all duration-200 w-[300px] rounded-xl shadow-md bg-[#2C2D2E]/50 backdrop-blur-lg opacity-[0.8]">
+        <div className="max-w-md relative group transition-all duration-300 w-[300px] rounded-xl  bg-[#2C2D2E] backdrop-blur-sm opacity-95">
             <div className="w-full h-[270px] overflow-hidden">
                 <Image
                     src={img}
