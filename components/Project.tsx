@@ -20,6 +20,7 @@ const Project = () => {
                         title="Car Hub"
                         discription="Rent a Car"
                         img="/carhub1.png"
+                        link="https://car-rent-by-sazzad.vercel.app/"
                     />
                 </div>
                 <div className="w-full sm:w-auto flex flex-col items-center">
@@ -27,6 +28,7 @@ const Project = () => {
                         title="Postit"
                         discription="Posting App"
                         img="/blogapp.png"
+                        link="https://blogapp-sazzzad.vercel.app/"
                     />
                 </div>
             </div>

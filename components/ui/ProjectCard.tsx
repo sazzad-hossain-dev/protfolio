@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 const ProjectCard = ({
     img,
     title,
     discription,
+    link,
 }: {
     img: string;
     title: string;
     discription: string;
+    link: string;
 }) => {
     return (
         <div className="max-w-md relative group transition-all duration-300 w-[300px] rounded-xl  bg-[#2C2D2E] backdrop-blur-sm opacity-95">
@@ -21,9 +24,11 @@ const ProjectCard = ({
                 />
             </div>
             <div className="p-4">
-                <h2 className="text-3xl font-custom3 text-white tracking-wide transition-colors duration-200 group-hover:text-[#8B48E8]">
-                    {title}
-                </h2>
+                <Link href={link}>
+                    <h2 className="text-3xl font-custom3 text-white tracking-wide transition-colors duration-200 group-hover:text-[#8B48E8]">
+                        {title}
+                    </h2>
+                </Link>
                 <p className="text-white font-poppins">{discription}</p>
             </div>
         </div>
