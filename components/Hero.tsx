@@ -1,7 +1,7 @@
 "use client";
+import { motion } from "framer-motion";
 import StatsSection from "./StatsSection";
 import TechSlider from "./ui/TechSlider";
-
 const technologies = [
     { name: "logo1", src: "/logo/logo1.png" },
     { name: "logo2", src: "/logo/logo2.png" },
@@ -14,18 +14,27 @@ const technologies = [
 const Hero = () => {
     return (
         <div className="base-container mb-16 ">
-            <h2 className="title  ">
-                Transforming Your Ideas into{" "}
-                <span className="text-[#8B48E8]">Reality</span>
-            </h2>
-            <p className="description my-4">
-                Passionate about creating intuitive and engaging user
-                experiences. Specialize in transforming ideas into beautifully
-                crafted products.
-            </p>
+            <motion.div
+                key={window.location.pathname}
+                initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5, ease: "easeIn" }}
+                viewport={{ once: true }}
+            >
+                <h2 className="title  ">
+                    Transforming Your Ideas into{" "}
+                    <span className="text-[#8B48E8]">Reality</span>
+                </h2>
+                <p className="description my-4">
+                    Passionate about creating intuitive and engaging user
+                    experiences. Specialize in transforming ideas into
+                    beautifully crafted products.
+                </p>
 
-            <StatsSection />
-            <TechSlider technologies={technologies} />
+                <StatsSection />
+
+                <TechSlider technologies={technologies} />
+            </motion.div>
         </div>
     );
 };

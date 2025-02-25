@@ -35,27 +35,25 @@ export default function Technology() {
     ];
 
     return (
-        <div className="base-container mb-16">
-            <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-            >
+        <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeIn" }}
+            viewport={{ once: true }}
+            className="base-container mb-16"
+        >
+            <div>
                 <h1 className="title">
                     Tech I Use for Best{" "}
                     <span className="text-[#8B48E8]">Results</span>{" "}
                 </h1>
-            </motion.div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-            >
+            </div>
+            <div>
                 <p className="description my-4">
                     I leverage a powerful tech stack to build modern,
                     responsive, and high-performance applications.
                 </p>
-            </motion.div>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
                 {techCardData.map(({ logo, title, category }, index) => (
                     <TechnologyCard
@@ -66,6 +64,6 @@ export default function Technology() {
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }

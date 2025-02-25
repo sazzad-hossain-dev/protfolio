@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { FiHome, FiTool } from "react-icons/fi";
 import { GoFileDirectory } from "react-icons/go";
 import { IoMailOutline } from "react-icons/io5";
+import { popupFromTop } from "@/data/animation";
 
 const navLinks = [
     { href: "/", icon: <FiHome className="icon" />, label: "Home" },
@@ -24,7 +26,12 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-container opacity-[0.8] w-[90%] lg:w-[300px] mx-auto rounded-lg shadow-md">
+        <motion.header
+            variants={popupFromTop}
+            initial="hidden"
+            animate="visible"
+            className="bg-container opacity-[0.8] w-[90%] lg:w-[300px] mx-auto rounded-lg shadow-md"
+        >
             <nav className="py-2">
                 <div className="flex items-center justify-center gap-6">
                     {navLinks.map(({ href, icon, label }) => (
@@ -47,6 +54,6 @@ export default function Header() {
                     ))}
                 </div>
             </nav>
-        </header>
+        </motion.header>
     );
 }

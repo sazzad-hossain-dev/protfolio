@@ -1,6 +1,6 @@
 "use client";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
-
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
@@ -46,7 +46,14 @@ const Contact = () => {
     };
 
     return (
-        <section className=" base-container flex items-center justify-center ">
+        <motion.section
+            key={window.location.pathname}
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeIn" }}
+            viewport={{ once: true }}
+            className=" base-container flex items-center justify-center "
+        >
             <form
                 onSubmit={handleSubmit}
                 className="container w-full  space-y-6 "
@@ -122,7 +129,7 @@ const Contact = () => {
                     </div>
                 </div>
             </form>
-        </section>
+        </motion.section>
     );
 };
 

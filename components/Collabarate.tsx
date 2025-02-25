@@ -34,9 +34,13 @@ const Collabarate = () => {
 
     return (
         <motion.div
+            key={window.location.pathname}
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeIn" }}
+            viewport={{ once: true }}
             className="base-container bg-container mb-16 group flex justify-center gap-2 hover:bg-[#8B48E8]"
             variants={parentVariants}
-            initial="initial"
             whileHover="hovered"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
